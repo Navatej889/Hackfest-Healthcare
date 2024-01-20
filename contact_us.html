@@ -1,0 +1,81 @@
+<!-- header.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+            <h2>Fill the form</h2>
+            <form action="form-process.php" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td>Upload your image</td>
+                        <td><input type="file" name="up_image"></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="f_name" placeholder="Type your name"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="l_name" placeholder="Type your last name"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="pass" placeholder="Type your password"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" name="gender" value="male" id="male"> <label for="male">Male</label>
+                            <input type="radio" name="gender" value="female" id="female"> <label for="female">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Your Skills</td>
+                        <td>
+                            <input type="checkbox" value="html" id="html"> <label for="html">HTML</label><br>
+                            <input type="checkbox" value="php" id="php"> <label for="php">PHP</label><br>
+                            <input type="checkbox" value="css" id="css"> <label for="css">CSS</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select your country</td>
+                        <td>
+                            <select name="sel_country">
+                                <option selected disabled>Select a country</option>
+                                <option value="America">America</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="Brunei">Brunei</option>
+                                <option value="Britain">Britain</option>
+                                <option value="Canada">Canada</option>
+                                <option value="China">China</option>
+                                <option value="India">India</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td>
+                            <textarea id="comments" name="comments"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Click here" name="submit-but"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<div id="footer">This website is created by Navatej Reddy</div>
+
+</body>
+</html>
