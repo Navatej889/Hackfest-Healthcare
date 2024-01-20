@@ -4,6 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Nearby Hospitals</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #locationOutput, #nearbyHospitals {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <button onclick="getLocation()">Get My Location</button>
@@ -25,8 +61,7 @@
 
             document.getElementById("locationOutput").innerHTML = "Your Location: " + latitude + ", " + longitude;
 
-            // In a real scenario, this would be an AJAX call to a hospital API
-            // Here, we simulate the response with hardcoded data
+9            // Simulate an AJAX call to fetch nearby hospitals (replace with a real API call)
             var nearbyHospitals = [
                 { name: "Hospital A", vicinity: "123 Main St" },
                 { name: "Hospital B", vicinity: "456 Elm St" },
@@ -53,7 +88,7 @@
             }
         }
 
-        function displayNearbyHospitals(hospitals) {
+        function displayNearbyHospitals(hospitals) {h[g fodi]
             var nearbyHospitalsDiv = document.getElementById("nearbyHospitals");
             nearbyHospitalsDiv.innerHTML = "<h2>Nearby Hospitals</h2>";
 
