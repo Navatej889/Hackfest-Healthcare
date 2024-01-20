@@ -77,6 +77,22 @@
             bottom: 0;
             width: 100%;
         }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button-link:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -107,6 +123,6 @@
         </ul>
     </section>
 
-    <p>Want to log out? <a href="login.html">log out</a></p>
+    <a href="login.html" class="button-link">Logout</a>
 </body>
 </html>
