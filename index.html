@@ -55,21 +55,10 @@
             margin-bottom: 2em;
         }
 
-        section#Links {
+        section#Questionnaire {
             background-color: #f5f5f5;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
 
         .button-link {
             display: inline-block;
@@ -95,6 +84,7 @@
 
     <nav>
         <a href="#Home">Home</a>
+        <a href="#Questionnaire">Questionnaire</a>
         <a href="#FAQs">FAQs</a>
         <a href="login.html">Logout</a>
     </nav>
@@ -102,15 +92,41 @@
     <section id="Home">
         <h2>Welcome to Health Locator</h2>
         <p>This website is focused on fetching the nearest hospitals, along with helping the patient check up into that hospital all in 5 minutes
-            <br> Our questionnaire is linked to the Google Maps API to provide convenient hospital recommendations <br>
-            Easy to login/signup into our website <br> Questionnaire is in English and all grammar is toned down to be understandable for everyone
+            <br> -Our questionnaire is linked to the Google Maps API to provide convenient hospital recommendations <br>
+            -Easy to login/signup into our website <br> -Questionnaire is in English and all grammar is toned down to be understandable for everyone
         </p>
     </section>
 
-    <section id="FAQs">
-        
+    <section id="Questionnaire">
+        <h2>The link to the Questionnaire is below</h2>
     </section>
-    <section id="Services">
+
+    <section id="FAQs">
+        <div class="w-full max-w-2xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently Asked Questions</h2>
+            <div class="mt-6 space-y-6">
+              <div>
+                <h3 class="font-semibold text-lg">Is the symptom analysis accurate?</h3>
+                <p class="mt-2 text-gray-500">
+                  Yes, absolutely! Our questionnaire has been created after countless hours spent in research to ensure as much accuracy as possible!
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">How fast can I get my results?</h3>
+                <p class="mt-2 text-gray-500">
+                  Usually 1-2 minutes, subject to internet traffic.
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Do you accept donations?</h3>
+                <p class="mt-2 text-gray-500">
+                  As of now, no, however we would love to add such a feature in the future.
+                </p>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section id="FAQs">
         <a href="login.html" class="button-link">Logout</a>
     </section>
 </body>
