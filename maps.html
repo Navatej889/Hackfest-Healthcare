@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearby Hospitals</title>
+  <style>
+    #map-container {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Nearby Hospitals</h1>
+
+<div id="map-container"></div>
+
+<script>
+  function initMap() {
+    // Default center (San Francisco)
+    let defaultCenter = { lat: 37.7749, lng: -122.4194 };
+
+    // Try to get user's current location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          defaultCenter = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          loadMap(defaultCenter);
+        },
+        error => {
+          console.error('Error getting location:', error);
+          loadMap(defaultCenter);
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+      loadMap(defaultCenter);
+    }
+
+    function loadMap(center) {
+      const mapContainer = document.getElementById('map-container');
+
+      if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+        // Google Maps API not loaded, load it dynamically with the provided API key
+        const script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCrwhCT_1c6PDlsH7M5eXIv4xghO9AiAek&callback=initMap';
+        document.head.appendChild(script);
+      } else {
+        // Google Maps API is already loaded
+        const map = new google.maps.Map(mapContainer, {
+          center: center,
+          zoom: 12
+        });
+
+        const hospitals = [
+          { name: 'Hospital A', lat: 37.7749, lng: -122.4194 },
+          { name: 'Hospital B', lat: 37.7833, lng: -122.4167 },
+          { name: 'Hospital C', lat: 37.7910, lng: -122.4050 },
+          { name: 'Osmania General Hospital', lat: 17.3898, lng: 78.4864 },
+          { name: 'Medicover Hospitals, Hitec City', lat: 17.4474, lng: 78.3804 },
+          { name: 'Star Hospitals, Banjara Hills', lat: 17.4104, lng: 78.4396 },
+          { name: 'Care Hospitals, Banjara Hills', lat: 17.4170, lng: 78.4394 },
+          { name: 'Sunshine Hospitals, Secunderabad', lat: 17.4454, lng: 78.4987 },
+          { name: 'Virinchi Hospitals, Banjara Hills', lat: 17.4122, lng: 78.4397 },
+          { name: 'Apollo Hospitals, Jubilee Hills', lat: 17.4236, lng: 78.4346 },
+          { name: 'Yashoda Hospitals, Secunderabad', lat: 17.4315, lng: 78.4837 },
+          { name: 'Continental Hospitals, Gachibowli', lat: 17.4349, lng: 78.3444 },
+          { name: 'KIMS Hospitals, Secunderabad', lat: 17.4382, lng: 78.4982 },
+          { name: 'Osmania General Hospital', lat: 17.3898, lng: 78.4864 },
+          { name: 'Care Hospitals, Banjara Hills', lat: 17.4170, lng: 78.4394 },
+          { name: 'Sunshine Hospitals, Secunderabad', lat: 17.4454, lng: 78.4987 },
+          { name: 'Virinchi Hospitals, Banjara Hills', lat: 17.4122, lng: 78.4397 },
+          { name: 'Star Hospitals, Banjara Hills', lat: 17.4104, lng: 78.4396 },
+          { name: 'Medicover Hospitals, Hitec City', lat: 17.4474, lng: 78.3804 },
+          { name: 'KIMS Bibi Hospital, Malakpet', lat: 17.3702, lng: 78.5016 },
+          { name: 'Sunshine Hospitals, Gachibowli', lat: 17.4271, lng: 78.3505 },
+          { name: 'Basavatarakam Indo-American Cancer Hospital, Banjara Hills', lat: 17.4128, lng: 78.4487 },
+          { name: 'Olive Hospitals, Mehdipatnam', lat: 17.3896, lng: 78.4402 },
+          { name: 'MaxCure Hospitals, Secretariat Road', lat: 17.4092, lng: 78.4639 },
+          { name: 'Asian Institute of Gastroenterology (AIG), Somajiguda', lat: 17.4285, lng: 78.4552 },
+          { name: 'Gleneagles Global Hospitals, Lakdi-Ka-Pul', lat: 17.4037, lng: 78.4667 },
+          { name: 'Sunrise Hospitals, Secunderabad', lat: 17.4431, lng: 78.4881 },
+          { name: 'Deccan Hospitals, Somajiguda', lat: 17.4262, lng: 78.4513 },
+          { name: 'Hyderabad Kidney and Laparoscopic Centre, Malakpet', lat: 17.3717, lng: 78.5024 }
+
+        ];
+
+        hospitals.forEach(hospital => {
+          const marker = new google.maps.Marker({
+            position: { lat: hospital.lat, lng: hospital.lng },
+            map: map,
+            title: hospital.name
+          });
+        });
+      }
+    }
+  }
+
+  // Call initMap to initialize the map
+  initMap();
+</script>
+
+</body>
+</html>
