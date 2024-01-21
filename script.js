@@ -1,8 +1,5 @@
 // Sample hospital data
 const hospitals = [
-    { name: 'Hospital A', lat: 37.7749, lng: -122.4194 },
-          { name: 'Hospital B', lat: 37.7833, lng: -122.4167 },
-          { name: 'Hospital C', lat: 37.7910, lng: -122.4050 },
           { name: 'Osmania General Hospital', lat: 17.3898, lng: 78.4864 },
           { name: 'Medicover Hospitals, Hitec City', lat: 17.4474, lng: 78.3804 },
           { name: 'Star Hospitals, Banjara Hills', lat: 17.4104, lng: 78.4396 },
