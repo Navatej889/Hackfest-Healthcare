@@ -3,89 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Information Questionnaire</title>
+    <title>Weight Management Goals</title>
     <style>
-        /* Your existing styles for the questionnaire */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #4caf50;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        form {
-            width: 80%;
-            max-width: 600px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
             color: #333;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
+        h1 {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: 20px;
         }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #4caf50;
+        .lose-weight-button {
+            background-color: #e74c3c;
             color: #fff;
-            padding: 12px;
+            padding: 15px 20px;
+            margin: 10px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        button:hover {
-            background-color: #45a049;
+        .lose-weight-button:hover {
+            background-color: #c0392b;
+        }
+
+        .gain-weight-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .gain-weight-button:hover {
+            background-color: #2980b9;
         }
     </style>
     <script>
-        function checkAndRedirect() {
-            var weight = document.getElementById('weight').value;
-            var age = document.getElementById('age').value;
-
-            if (weight >= 70 && 9 < age < 101) {
-                // Redirect to the fitness plan HTML
-                window.location.href = 'fitness_plan.html';
-            } else if (weight <= 50 && 9 < age < 101) {
-                // Redirect to another HTML file for underweight individuals
-                window.location.href = 'underweight_plan.html';
-            }
-            else {
-                // Continue with the default form submission
-                window.location.href = 'underweight_plan.html';
+        function redirectToPage(goal) {
+            if (goal === 'lose') {
+                window.location.href = "fitness_plan.html";
+            } else if (goal === 'gain') {
+                window.location.href = "underweight_plan.html";
             }
         }
     </script>
 </head>
 <body>
-
-    <form name="userForm" onsubmit="checkAndRedirect(); return false;">
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
-
-        <label for="height">Height (cm):</label>
-        <input type="number" id="height" name="height" placeholder="Enter your height" required>
-
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" placeholder="Enter your age" required>
-
-        <button type="submit">Submit</button>
-    </form>
-
+    <h1>Weight Management Goals</h1>
+    <button class="lose-weight-button" onclick="redirectToPage('lose')">Want to Lose Weight</button>
+    <button class="gain-weight-button" onclick="redirectToPage('gain')">Want to Gain Weight</button>
 </body>
 </html>
+

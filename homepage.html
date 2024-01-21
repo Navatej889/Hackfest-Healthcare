@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Locator</title>
+    <title>Health </title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,6 +55,22 @@
             margin-bottom: 2em;
         }
 
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007BFF; /* Choose your preferred background color */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect */
+    .button:hover {
+        background-color: #0056b3; /* Adjust the hover background color */
+    }
+
         section#MedicationManagementSystem {
             background-color: #f5f5f5;
             border-radius: 10px;
@@ -62,14 +78,7 @@
             margin-bottom: 2em;
         }
 
-        section#MentalHealthPlatform {
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
-        }
-
-        section#HealthInformationHub {
+        section#stressManagementHub {
             background-color: #f5f5f5;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -77,13 +86,6 @@
         }
 
         section#DiseaseAwareness {
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
-        }
-
-        section#CommunityForum {
             background-color: #f5f5f5;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -116,10 +118,8 @@
         <a href="#Home">Home</a>
         <a href="#FitnessAndNutritionPlanning">Fitness and Nutrition Planner</a>
         <a href="#MedicationManagementSystem">Medication Management System</a>
-        <a href="#MentalHealthPlatform">Mental Health Platform</a>
-        <a href="#HealthInformationHub">Health Information Hub</a>
+        <a href="#stressManagementHub">Stress Management Hub</a>
         <a href="#DiseaseAwareness">Disease Awareness Campaign</a>
-        <a href="#CommunityForum">Community Forum</a>
     </nav>
 
     <section id="Home">
@@ -128,27 +128,23 @@
     </section>
 
     <section id="FitnessAndNutritionPlanning">
-        <h2>Fitness and Nutrition Planner</h2>
+        <h2><a href="questionnaire.html">Fitness and Nutrition Planner</a></h2>
     </section>
 
     <section id="MedicationManagementSystem">
         <h2>Medication Management System</h2>
     </section>
 
-    <section id="MentalHealthPlatform">
-        <h2>Mental Health Platform</h2>
-    </section>
-
-    <section id="HealthInformationHub">
-        <h2>Health Information Hub</h2>
+    <section id="stressManagementHub">
+        <h2>Stress Management Hub</h2>
+        <a href="stress.html" class="button">Stress management hub</a>
     </section>
 
     <section id="DiseaseAwareness">
         <h2>Disease Awareness</h2>
-    </section>
-
-    <section id="CommunityForum">
-        <h2>Community Forum</h2>
+        <a href="covid19awareness.html">Covid 19</a>
+        <a href="diabetesawareness.html">Diabetes</a>
+        <a href="tubercolosisawareness.html">Tubercolosis</a>
     </section>
 
     <section id="button-link">
