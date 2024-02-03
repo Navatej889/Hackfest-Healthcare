@@ -31,60 +31,41 @@
             text-decoration: none;
             color: #fefefe;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffb347; /* Adjust the hover color */
         }
 
         section {
             padding: 2em;
-        }
-
-        section#Home {
+            margin: 2em auto;
+            max-width: 800px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
         }
 
         section h2 {
             color: #514caf;
         }
 
-        section#FitnessAndNutritionPlanning {
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
-        }
-
         .button {
-        display: inline-block;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-        background-color: #007BFF; /* Choose your preferred background color */
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    /* Hover effect */
-    .button:hover {
-        background-color: #0056b3; /* Adjust the hover background color */
-    }
-
-        section#stressManagementHub {
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        section#DiseaseAwareness {
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
+        .button:hover {
+            background-color: #0056b3;
         }
-    
+
         .button-link {
             display: inline-block;
             padding: 15px 25px;
@@ -95,10 +76,11 @@
             border-radius: 7px;
             cursor: pointer;
             font-size: 17px;
+            transition: background-color 0.3s ease;
         }
 
         .button-link:hover {
-            background-color: #514caf;
+            background-color: #0056b3; /* Adjust the hover color */
         }
     </style>
 </head>
@@ -112,12 +94,12 @@
         <a href="#FitnessAndNutritionPlanning">Fitness and Nutrition Planner</a>
         <a href="#stressManagementHub">Stress Management Hub</a>
         <a href="#DiseasseAwareness">Disease Awareness Campaign</a>
-        <a href="maps 2.0.html">Near By Hospitals</a>
+        <a href="maps 2.0.html">Nearby Hospitals</a>
     </nav>
 
     <section id="Home">
         <h2>Medifit Guide</h2>
-        <p>A package of multiple health tools such as fitness planners, stress management advice and even <br> a hospital finder, all for absolutely free!</p>
+        <p>A package of multiple health tools such as fitness planners, stress management advice, and even a hospital finder, all for absolutely free!</p>
     </section>
 
     <section id="FitnessAndNutritionPlanning">
@@ -127,7 +109,7 @@
 
     <section id="stressManagementHub">
         <h2>Stress Management Hub</h2>
-        <p>A health management hub is a centralized platform that offers materials and tools to help people track and manage their health. Personal health records, wellness monitoring, appointment scheduling, health education, prescription management, advice on exercise and nutrition, telehealth services, health risk assessments, and community assistance are some of the elements that are commonly included. The goal is to provide a comprehensive solution for controlling many areas of health and well-being, albeit the exact features may differ.</p>
+        <p>A health management hub is a centralized platform that offers materials and tools to help people track and manage their health...</p>
         <a href="stress.html" class="button">Stress Management</a>
     </section>
 
@@ -135,17 +117,13 @@
         <h2>Disease Awareness</h2>
         <a href="covid19awareness.html">Covid 19</a> <br>
         <a href="diabetesawareness.html">Diabetes</a> <br>
-        <a href="tubercolosisawareness.html">Tuberculosis</a>
+        <a href="tuberculosisawareness.html">Tuberculosis</a>
     </section>
 
     <section id="button-link">
         <a href="login.html" class="button-link">Logout</a>
     </section>
-    <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="KPAkMqg5scJQ6q7FAKBNf"
-        domain="www.chatbase.co"
-        defer>
-        </script>
+
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="KPAkMqg5scJQ6q7FAKBNf" domain="www.chatbase.co" defer></script>
 </body>
 </html>
